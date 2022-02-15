@@ -74,7 +74,7 @@ function entity_browser_block_layout_form_media_type_add_form_alter(&$form, Form
  */
 function entity_browser_block_layout_form_taxonomy_vocabulary_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   \Drupal::classResolver(FormAlter::class)
-    ->alterEntityTypeForm('media', $form, $form_state, $form_id);
+    ->alterEntityTypeForm('taxonomy_term', $form, $form_state, $form_id);
 }
 
 /**
