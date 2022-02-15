@@ -1,5 +1,9 @@
 /* Fix the tiny entity reference browser result table to look better in
   * off-canvas area */
+
+#drupal-off-canvas #entity-browser-block-form table,#drupal-off-canvas #entity-browser-block-form .table-responsive {
+  overflow: hidden;
+}
 #drupal-off-canvas #entity-browser-block-form table td,
 #drupal-off-canvas #entity-browser-block-form table th {
   display: inline-block;
@@ -7,6 +11,13 @@
 }
 #drupal-off-canvas #entity-browser-block-form table th {
   display: none;
+}
+#drupal-off-canvas #entity-browser-block-form table td {
+  padding-left: 40px;
+}
+#drupal-off-canvas #entity-browser-block-form table td.empty {
+  padding: 10px;
+  text-align: center;
 }
 /* Embiggen the item name. */
 #drupal-off-canvas #entity-browser-block-form td:nth-child(1) {
@@ -35,4 +46,5 @@ bleed into the background */
   text-align: center;
   cursor: pointer;
   transition: background 0.5s ease;
+  margin-top: 20px;
 }
