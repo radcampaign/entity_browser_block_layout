@@ -70,6 +70,14 @@ function entity_browser_block_layout_form_media_type_add_form_alter(&$form, Form
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter() for taxonomy_vocabulary_form().
+ */
+function entity_browser_block_layout_form_taxonomy_vocabulary_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  \Drupal::classResolver(FormAlter::class)
+    ->alterEntityTypeForm('taxonomy_term', $form, $form_state, $form_id);
+}
+
+/**
  * Implements hook_preprocess_views_view().
  *
  * Adds css and js to entity browser views that will highlight the selected
